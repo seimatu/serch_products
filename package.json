@@ -1,0 +1,25 @@
+{
+  "name": "serch_products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.9.6",
+    "electron": "^11.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seimatu/serch_products.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seimatu/serch_products/issues"
+  },
+  "homepage": "https://github.com/seimatu/serch_products#readme"
+}

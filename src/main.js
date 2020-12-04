@@ -1,3 +1,6 @@
+const dayjs = require ('dayjs');
+const now  = dayjs();
+
 // アプリケーション作成用のモジュールを読み込み
 const {app, BrowserWindow} = require('electron');
 
