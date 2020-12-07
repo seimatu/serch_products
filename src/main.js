@@ -1,8 +1,9 @@
 const dayjs = require ('dayjs');
 const now  = dayjs();
+// import { thisNotification } from "./module/notification";
 
 // アプリケーション作成用のモジュールを読み込み
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 
 // メインウィンドウ
 let mainWindow;
@@ -46,3 +47,9 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+// playwiright
+ipcMain.handle("start1", async () => {
+    console.log('hello');
+    
+})

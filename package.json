@@ -8,7 +8,9 @@
     "dayjs": "^1.9.6",
     "electron": "^11.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "playwright": "^1.6.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

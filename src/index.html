@@ -13,6 +13,16 @@
 <body>
     <h1>hello! electron</h1>
 
+    <script>
+        const { ipcRenderer } = window.require("electron");
+        function start(){
+            ipcRenderer.invoke("start1");
+            }
+        
+    </script>
+    <button type="submit" name="name" value="value" onclick="start()">button</button>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
 </body>
