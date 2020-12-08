@@ -1,5 +1,5 @@
-const dayjs = require ('dayjs');
-const now  = dayjs();
+// const dayjs = require ('dayjs');
+// const now  = dayjs();
 // import { thisNotification } from "./module/notification";
 
 // アプリケーション作成用のモジュールを読み込み
@@ -13,6 +13,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
     width: 800, height: 600,
   });
@@ -49,7 +50,13 @@ app.on('activate', () => {
 });
 
 // playwiright
+const pw = require('playwright');
+
 ipcMain.handle("start1", async () => {
-    console.log('hello');
-    
+    const browser = await pw.webkit.launch(); // or 'chromium', 'firefox'
+    const context = await browser.newContext();
+    const page = await context.newPage();
+  
+    await page.goto('https://www.yahoo.co.jp/');
+    await page.screenshot({ path: 'example3.png' });
 })
